@@ -3,6 +3,7 @@
 **Fecha**: 2026-10-26. Documentos de entrada: spec.md, plan.md, research.md,
 data-model.md, contracts/api.md y quickstart.md de esta funcionalidad.
 **Estado**: Pendiente. Pruebas automatizadas obligatorias. Rutas relativas a la raíz.
+**Trabajo en equipo**: Consultar el [plan de trabajo para dos integrantes](../plan-trabajo-equipo.md) para responsables, archivos exclusivos y orden de integración.
 
 ## Fase 1: Preparación
 
