@@ -75,7 +75,7 @@ You **MUST** consider the user input before proceeding (if not empty).
    - Phase 1: Setup tasks (project initialization)
    - Phase 2: Foundational tasks (blocking prerequisites for all user stories)
    - Phase 3+: One phase per user story (in priority order from spec.md)
-   - Each phase includes: story goal, independent test criteria, tests (if requested), implementation tasks
+   - Each phase includes: story goal, independent test criteria, pruebas automatizadas obligatorias, implementation tasks
    - Final Phase: Polish & cross-cutting concerns
    - All tasks must follow the strict checklist format (see Task Generation Rules below)
    - Clear file paths for each task
@@ -128,7 +128,7 @@ The tasks.md should be immediately executable - each task must be specific enoug
 
 **CRITICAL**: Tasks MUST be organized by user story to enable independent implementation and testing.
 
-**Tests are OPTIONAL**: Only generate test tasks if explicitly requested in the feature specification or if user requests TDD approach.
+**Pruebas OBLIGATORIAS**: La constitución exige pruebas automatizadas para toda funcionalidad antes de finalizarla. Generar tareas de pruebas por historia, incluidas entradas inválidas y límites pertinentes. Redactar todos los documentos generados en español.
 
 ### Checklist Format (REQUIRED)
 
@@ -170,12 +170,12 @@ Every task MUST strictly follow this format:
      - Models needed for that story
      - Services needed for that story
      - Interfaces/UI needed for that story
-     - If tests requested: Tests specific to that story
+     - Pruebas obligatorias específicas de esa historia
    - Mark story dependencies (most stories should be independent)
 
 2. **From Contracts**:
    - Map each interface contract → to the user story it serves
-   - If tests requested: Each interface contract → contract test task [P] before implementation in that story's phase
+   - Para cada contrato de interfaz: incluir una tarea de prueba de contrato en la fase de su historia; marcar [P] solo si es independiente
 
 3. **From Data Model**:
    - Map each entity to the user story(ies) that need it

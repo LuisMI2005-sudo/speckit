@@ -1,50 +1,122 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+Informe de sincronización
+- Versión anterior: plantilla sin ratificar → 1.0.0 (primera adopción).
+- Principios establecidos: I. Simplicidad primero; II. Pruebas obligatorias;
+  III. Código legible; IV. Validación de entradas; V. Accesible y responsivo.
+- Secciones añadidas: Idioma y contexto académico; Flujo de trabajo y criterios de
+  finalización; Gobernanza.
+- Secciones eliminadas: ninguna; se sustituyeron los marcadores de la plantilla.
+- Archivos sincronizados:
+  - .specify/templates/constitution-template.md: actualizado en español.
+  - .specify/templates/plan-template.md: actualizado con controles de los cinco principios.
+  - .specify/templates/spec-template.md: actualizado con requisitos verificables.
+  - .specify/templates/tasks-template.md: actualizado con pruebas obligatorias.
+  - .specify/templates/checklist-template.md: actualizado en español.
+  - .agents/skills/speckit-tasks/SKILL.md: corregida la condición de pruebas opcionales.
+  - AGENTS.md: actualizado con idioma y precedencia de la constitución.
+- .specify/templates/commands/: no existe en este proyecto; se revisaron las
+  instrucciones locales de generación de tareas e implementación.
+- No existen README.md ni docs/quickstart.md del proyecto para sincronizar.
+- Pendientes: ninguno.
+-->
+# Constitución del proyecto académico de la UPB
 
-## Core Principles
+## Principios fundamentales
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Simplicidad primero
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+Se DEBE implementar la solución mínima que satisfaga los requisitos actuales y sus
+criterios de aceptación. No se DEBEN añadir funciones, dependencias, capas ni
+abstracciones para necesidades hipotéticas (YAGNI: no lo vas a necesitar).
+Toda complejidad adicional DEBE justificarse en el plan con una necesidad actual y
+la razón por la que una alternativa más simple no basta. El alcance académico y
+el tiempo disponible orientan las decisiones sin reducir los controles de calidad.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### II. Pruebas obligatorias
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+Toda funcionalidad DEBE contar con pruebas automatizadas antes de darse por
+terminada. Las pruebas DEBEN verificar los criterios de aceptación, los casos
+límite y los errores pertinentes, incluidas las entradas inválidas. Las
+correcciones de errores DEBEN incorporar una prueba de regresión.
+Se DEBEN usar pruebas unitarias para lógica aislada y pruebas de integración
+cuando el comportamiento dependa de la interacción entre componentes.
+La entrega DEBE incluir el comando reproducible de ejecución y evidencia de que
+las pruebas nuevas y existentes pasan. Una comprobación manual no sustituye las
+pruebas automatizadas.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### III. Código legible
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+El código DEBE usar nombres claros y coherentes con el dominio y funciones pequeñas
+con una responsabilidad definida. Se DEBEN evitar duplicaciones y estructuras
+innecesariamente difíciles de entender. Los comentarios y la documentación DEBEN
+explicar decisiones, restricciones y comportamientos no obvios, sin repetir lo que
+el código ya expresa. La revisión DEBE comprobar que otro integrante pueda entender
+el cambio y ejecutar sus pruebas con la documentación disponible.
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+### IV. Validación de entradas
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+Todo dato proporcionado por el usuario DEBE validarse antes de procesarlo,
+persistirlo o utilizarlo en operaciones del sistema. La validación DEBE comprobar,
+según corresponda, presencia, tipo, formato, longitud, rango y reglas del dominio.
+En aplicaciones con servidor, este DEBE validar los datos aunque la interfaz ya
+los haya validado. Los datos inválidos DEBEN rechazarse con mensajes claros en
+español y sin producir cambios parciales ni revelar información interna.
+Las pruebas automatizadas DEBEN cubrir valores válidos, inválidos y límites.
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+### V. Accesible y responsivo
 
-## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
+La interfaz DEBE permitir completar los flujos principales tanto en celular como
+en computadora. Se DEBEN verificar al menos anchos de 360 y 1280 píxeles, sin
+pérdida de contenido, controles superpuestos ni desplazamiento horizontal de la
+página en los flujos principales. La interfaz DEBE usar estructura semántica,
+etiquetas en formularios, navegación por teclado, foco visible y mensajes de error
+asociados a los campos. La información no DEBE depender exclusivamente del color.
+Las pruebas automatizadas DEBEN cubrir los flujos principales en ambos tamaños
+y las comprobaciones de accesibilidad automatizables; la revisión manual de
+teclado y presentación visual complementa estas pruebas.
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+## Idioma y contexto académico
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+Todo el contenido de los documentos del proyecto DEBE estar en español, incluidos
+especificaciones, planes, tareas, listas de verificación, informes, comentarios y
+guías. Se conservan nombres de archivos, comandos, identificadores técnicos y
+nombres propios cuando su traducción impida su uso correcto.
+
+Las decisiones y los resultados DEBEN ser trazables a los requisitos académicos
+acordados. Las fuentes y recursos externos utilizados DEBEN atribuirse en la
+documentación pertinente. Esta constitución define acuerdos del proyecto; no
+presupone políticas institucionales adicionales de la UPB.
+
+## Flujo de trabajo y criterios de finalización
+
+1. Especificar el alcance mínimo, las historias priorizadas, los criterios de
+   aceptación, las reglas de validación y los flujos en celular y computadora.
+2. Elaborar un plan que compruebe los cinco principios antes de investigar y
+   nuevamente después del diseño; justificar toda complejidad adicional.
+3. Desglosar cada historia en tareas de implementación y pruebas automatizadas,
+   con las verificaciones de validación, accesibilidad y adaptación necesarias.
+4. Implementar y revisar nombres, responsabilidades y documentación de lo no obvio.
+5. Ejecutar las pruebas automatizadas nuevas y existentes y registrar el comando
+   y el resultado; comprobar también teclado y presentación en ambos tamaños.
+6. Dar por terminada la funcionalidad únicamente cuando cumpla sus criterios de
+   aceptación, pasen todas las pruebas y esté actualizada la documentación en español.
+
+## Gobernanza
+
+Esta constitución prevalece sobre plantillas, instrucciones de generación y
+prácticas locales que la contradigan. Cada revisión de cambios DEBE comprobar
+su cumplimiento. Un incumplimiento bloquea la finalización hasta corregirse;
+una justificación de complejidad no exime de los demás principios.
+
+Las modificaciones DEBEN documentar la motivación, los principios afectados y el
+impacto en especificaciones, planes, tareas y código. El equipo responsable del
+proyecto DEBE acordar la modificación antes de adoptarla y sincronizar los
+artefactos afectados. Toda modificación DEBE actualizar el informe de
+sincronización, la versión y la fecha de última modificación.
+
+La versión sigue el esquema MAYOR.MENOR.PARCHE: MAYOR para eliminar o redefinir
+principios de forma incompatible; MENOR para añadir principios o ampliar
+obligaciones; PARCHE para aclaraciones sin cambio de obligaciones.
+La fecha de ratificación se conserva en las modificaciones posteriores.
+
+**Versión**: 1.0.0 | **Ratificación**: 2026-10-26 | **Última modificación**: 2026-10-26

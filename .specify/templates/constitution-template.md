@@ -1,50 +1,43 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+# Constitución de [NOMBRE DEL PROYECTO]
 
-## Core Principles
+<!-- Redactar todo en español y sustituir los marcadores antes de publicar.
+Al actualizar, anteponer un informe de sincronización con versiones, principios,
+secciones, archivos afectados y pendientes. Respetar los principios ya ratificados. -->
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+## Principios fundamentales
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### I. [NOMBRE DEL PRINCIPIO 1]
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+[Reglas verificables y justificación]
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### II. [NOMBRE DEL PRINCIPIO 2]
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+[Reglas verificables y justificación]
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+### III. [NOMBRE DEL PRINCIPIO 3]
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+[Reglas verificables y justificación]
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+### IV. [NOMBRE DEL PRINCIPIO 4]
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+[Reglas verificables y justificación]
 
-## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
+### V. [NOMBRE DEL PRINCIPIO 5]
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+[Reglas verificables y justificación]
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+## Idioma y contexto académico
+
+[Obligación de redactar en español y restricciones académicas del proyecto]
+
+## Flujo de trabajo y criterios de finalización
+
+[Pasos de especificación, planificación, pruebas, implementación y revisión;
+criterios verificables para dar por terminada cada funcionalidad]
+
+## Gobernanza
+
+[Precedencia, revisión de cumplimiento, procedimiento de modificación,
+aprobación del equipo, sincronización y política MAYOR.MENOR.PARCHE]
+
+**Versión**: [VERSIÓN] | **Ratificación**: [FECHA DE RATIFICACIÓN] | **Última modificación**: [FECHA DE MODIFICACIÓN]
