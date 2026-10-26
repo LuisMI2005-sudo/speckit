@@ -7,6 +7,7 @@ contracts/interfaz.md y quickstart.md de esta funcionalidad.
 **Estado**: Pendiente de implementación; ninguna tarea ejecutada.
 **Pruebas**: Obligatorias para toda funcionalidad, incluidos límites y errores.
 **Idioma**: Código documentado, mensajes y documentos en español; conservar nombres técnicos necesarios.
+**Trabajo en equipo**: Consultar el [plan de trabajo para dos integrantes](../plan-trabajo-equipo.md) para responsables, archivos exclusivos y orden de integración.
 
 ## Formato y rutas
 
